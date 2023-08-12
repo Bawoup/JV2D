@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest/dist/handtrack.min.js"></script>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      position: absolute;
+      background-color: dimgray;
+    }
+
+    video {
+      transform: scaleX(-1);
+      position: fixed;
+      right: 30px;
+      top: 30px;
+      height: 45vh;
+      width: 36vw;
+    }
+
+    .container {
+      position: fixed;
+      right: 35px;
+      bottom: 30px;
+      display: block;
+      background-color: blue;
+      height: 45vh;
+      width: 36vw;
+    }
+
+    .resultat {
+      color: white;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-size: 130px;
+    }
+
+    .view {
+      position: fixed;
+      left: 30px;
+      top: 30px;
+      display: block;
+      background-color: yellow;
+      height: 70vh;
+      width: 59vw;
+    }
+
+    .texte {
+      position: fixed;
+      left: 30px;
+      bottom: 30px;
+      display: block;
+      background-color: red;
+      height: 22vh;
+      width: 59vw;
+    }
+
+  </style>
+</head>
+<body>
+  <video id="video" autoplay muted></video>
+  <div class="container">
+    <div class="resultat" id="resultat">test</div>
+  </div>
+  <div class="view" id="view" onclick="detectHand()"></div>
+  <div class="texte" id="texte" onclick="detectEmotion()"> DETECT </div>
+</html>
