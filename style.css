@@ -1,0 +1,114 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+    --color-light: white;
+    --color-dark: #212121;
+    --color-signal: #fab700;
+    
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+    
+    --size-bezel: .5rem;
+    --size-radius: 4px;
+    
+    line-height: 1.4;
+    
+    font-family: 'Inter', sans-serif;
+    font-size: calc(.6rem + .4vw);
+    color: var(--color-text);
+    font-weight: 300;
+    padding: 0 calc(var(--size-bezel) * 3);
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    background-color: #3b372e;
+  }
+
+  video {
+    margin-top: calc(4 * var(--size-bezel));
+    border-radius: var(--size-radius);
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: -.5rem .5rem 0 var(--color-shadow, currentColor);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    --color-shadow: var(--color-accent);
+
+    transform: scaleX(-1);
+    position: fixed;
+    right: 30px;
+    top: 0px;
+    height: 43%;
+    width: 33.5%;
+  }
+
+  .container {
+    margin-top: calc(4 * var(--size-bezel));
+    padding: calc(4 * var(--size-bezel));
+    border-radius: var(--size-radius);
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    --color-shadow: var(--color-accent);
+    position: fixed;
+
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    display: block;
+    height: 37%;
+    width: 29.3%;
+  }
+
+  .resultat {
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 130px;
+  }
+
+  .view {
+    margin-top: calc(4 * var(--size-bezel));
+    padding: calc(4 * var(--size-bezel));
+    border-radius: var(--size-radius);
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    --color-shadow: var(--color-accent);
+
+    position: fixed;
+    left: 30px;
+    top: 0px;
+    display: block;
+    background-color: yellow;
+    height: 58%;
+    width: 55%;
+  }
+
+  .texte {
+    margin-top: calc(4 * var(--size-bezel));
+    padding: calc(4 * var(--size-bezel));
+    border-radius: var(--size-radius);
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    --color-shadow: var(--color-accent);
+    position: fixed;
+    left: 30px;
+    bottom: 40px;
+    display: block;
+    height: 15%;
+    width: 55%;
+  }
