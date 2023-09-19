@@ -83,17 +83,36 @@ body {
     border-radius: var(--size-radius);
     border: 3px solid var(--color-shadow, currentColor);
     box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
-    background-color: var(--color-dark);
+    background-image: url("../mage/forest.jpg");
+    background-size: 118%;
     color: var(--color-light);
     --color-shadow: var(--color-accent);
 
     position: fixed;
     left: 30px;
     top: 0px;
-    display: block;
-    background-color: yellow;
+    display: flex;
+    overflow: hidden;
     height: 58%;
     width: 55%;
+  }
+
+  .environment {
+    position: relative;
+    flex-shrink: 0;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: auto;
+  }
+
+  .character {
+    position: relative;
+    bottom: -32px;
+    left: 100px;
+    flex-shrink: 0;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 3;
   }
 
   .texte {

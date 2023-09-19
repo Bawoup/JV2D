@@ -1,5 +1,33 @@
 const video = document.getElementById('video');
 
+navigator.getUserMedia = navigator.getUserMedia ||
+navigator.webkitGetUserMedia ||
+navigator.mozGetUserMedia ||
+navigator.msGetUserMedia;
+
+let text_sound = new Audio("text_sound.wav");
+
+let clearText = function() {
+  document.getElementById("texte").innerHTML = "";
+}
+let showText = function (target, message, index, interval) {
+  if (index < message.length) {
+    text_sound.play();
+    $(target).append(message[index++]);
+    setTimeout(function () { showText(target, message, index, interval); }, interval);
+  }
+
+  if (index == message.length) {
+    text_sound.pause();
+    text_sound.currentTime = 0;
+  }
+}
+
+$( "#texte" ).on( "click", function() {
+  clearText();
+  showText("#texte", "Dans les landes angloises, le roi démon se relève.", 0, 50);
+});
+
 const defaultParams = {
   flipHorizontal: false,
   outputStride: 16,
